@@ -1,0 +1,27 @@
+{
+  "name": "zerobot",
+  "version": "1.0.0",
+  "description": "Bot for ZeroServer Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nerwind/zerobot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "nerwind93 <nerwindgd@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nerwind/zerobot/issues"
+  },
+  "homepage": "https://github.com/Nerwind/zerobot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
