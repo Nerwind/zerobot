@@ -4,6 +4,9 @@ get = require('node-fetch');
 module.exports = {
     name: 'user',
     aliases: ['u'],
+    args: true,
+    desc: 'Показывает инфу о пользователе не ZeroServer\'е',
+    usage: '<имя пользователя или его айди>',
     async run(client, message, args) {
         let name = args.join(' ');
         if (!name) return 'а где.';
@@ -16,7 +19,7 @@ module.exports = {
         const embed = new MessageEmbed({
             title: userName, color: 'RED', fields: [
                 {
-                    name: 'Инфа о пользователе', value: `**Имя:** ${userName}\t**Айди:** ${accountID}\n**Пройдено демонов:** ${demons}\t**Звёзд:** ${stars}\n**Монеток:** ${coins}\t**Пользовательских монеток:** ${userCoins}\n**Алмазов:** ${diamonds || 0}\t**Орбов:** ${orbs || 0}\n**Креатор поинтов:** ${creatorPoints}${youtube ? `\t**Ссылка на ютуб:** [тык](https://www.youtube.com/channel/${youtube})` : ''}`
+                    name: 'Инфа о пользователе', value: `**Имя:** ${userName}\n**Айди:** ${accountID}\n**Пройдено демонов:** ${demons}\n**Звёзд:** ${stars}\n**Монеток:** ${coins}\n**Пользовательских монеток:** ${userCoins}\n**Алмазов:** ${diamonds || 0}\n**Орбов:** ${orbs || 0}\n**Креатор поинтов:** ${creatorPoints}${youtube ? `\n**Ссылка на ютуб:** [тык](https://www.youtube.com/channel/${youtube})` : ''}`
                 }
             ]
         });
